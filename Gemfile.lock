@@ -7,29 +7,61 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    celluloid (0.18.0)
-      timers (~> 4)
-    celluloid-io (0.17.3)
-      celluloid (>= 0.17.2)
-      nio4r (>= 1.1)
-      timers (>= 4.1.1)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     concurrent-ruby (1.1.7)
+    crack (0.4.4)
+    dentaku (3.4.1)
+    diff-lcs (1.4.4)
     dotenv (2.7.6)
+    eventmachine (1.2.7)
     faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
     faraday_middleware (1.0.0)
       faraday (~> 1.0)
+    faye-websocket (0.11.0)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.5.1)
+    foreman (0.87.2)
     gli (2.19.2)
+    hashdiff (1.0.1)
     hashie (4.1.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     minitest (5.14.2)
     multipart-post (2.1.1)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
     nio4r (2.5.4)
+    public_suffix (4.0.6)
     puma (5.1.1)
       nio4r (~> 2.0)
+    rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
+    rake (13.0.3)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.0)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.0)
     ruby2_keywords (0.0.2)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
     slack-ruby-bot (0.16.1)
       activesupport
       hashie
@@ -40,9 +72,14 @@ GEM
       gli
       hashie
       websocket-driver
-    timers (4.3.2)
+    tilt (2.0.10)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    vcr (6.0.0)
+    webmock (3.11.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -52,10 +89,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  celluloid-io
+  dentaku
   dotenv
+  faye-websocket
+  foreman
   puma
+  rack-test
+  rake
+  rspec
+  sinatra
   slack-ruby-bot
+  vcr
+  webmock
 
 BUNDLED WITH
    2.1.4
