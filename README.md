@@ -35,9 +35,18 @@ $ Create .env file and add slack api token
 > You'll be ready to run the app in a local server:
 
 ```
-$ run: ruby adder_bot.rb 
+$ run: foreman start 
 ```
-> Go to slack and play around with the adder bot i.e 23 + 34 = 57
+> Go to slack channel and start the adder bot: 
+
+```
+$ Type: /invite @adderbot followed by calculation i.e 23+34=57
+```
+> Run test with RSpec
+
+```
+$ run: rspec
+```
 
 ## Developed by
 

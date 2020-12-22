@@ -4,7 +4,6 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-gem 'dentaku'
 gem 'dotenv'
 gem 'faye-websocket'
 gem 'puma'

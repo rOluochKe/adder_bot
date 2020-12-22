@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'adder-bot'
+require 'adder_bot'
 require 'web'
 
 Thread.new do
